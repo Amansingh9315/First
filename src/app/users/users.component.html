@@ -1,0 +1,75 @@
+<!-- <p>First Component</p>
+<hr>
+<p>{{fun }}</p>
+<hr>
+<button (click)="changeName()" >Change the name</button>
+<hr> -->
+<label>Search :</label>
+<input type="text" [(ngModel)]="searchtext" placeholder="Search by id, name , email" style="height: 30px;">
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <!-- <th>Address</th>
+            <th>City</th> -->
+        </tr>
+        <tr *ngFor="let item of user  | filter:searchtext | paginate: { itemsPerPage: 10, currentPage: p } let i=index">
+            <td><a [routerLink]="['/user',item.id]" >{{item.id}}</a></td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <!-- <td>{{item.address.street}}</td>
+            <td>{{item.address.city}}</td> -->
+        </tr>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </table>
+    <hr>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-binding></app-binding> -->
+<!-- <ul> -->
+    <!-- <li *ngFor="let item of user">{{item}}</li> -->
+<!-- </ul> -->
+<!-- <table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let item of obj">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.dob | date}}</td>
+        <td>{{item.dob | pipes}}</td>
+    </tr>
+</table>
+<hr> -->
+<!-- <div *ngIf="isuserloggedin; else logout">
+    <p>
+        This is a ngif directives.
+    </p>
+</div>
+<ng-template #logout>
+    <p>
+        You are not loggedin.
+    </p>
+</ng-template> -->
+<!-- <p>{{uname}}</p>
+<hr> -->
+<!-- <button (click)="method()">Parent Property</button> -->
+
+

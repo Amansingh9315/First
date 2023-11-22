@@ -1,0 +1,73 @@
+<p>{{title}}</p>
+<hr>
+
+<button (click)="Eventbinding()">Event Binding</button>
+<hr>
+
+<input type="text" [(ngModel)]="name">
+<p>Welcome {{name}}</p>
+<hr>
+<p>{{uname}}</p>
+<!-- <button (click)="button()">Change P to C</button> -->
+<hr>
+<!-- <ul>
+    <li *ngFor="let item of user">{{item}}</li>
+</ul>
+<hr>-->
+<table class="table table-bordered">
+    <tr>
+        <th>Index</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Date of birth</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let item of obj; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name | uppercase}}</td>
+        <td>{{item.city | uppercase}}</td>
+        <td>{{item.dob | date:"dd/MM/yyyy"}}</td>
+        <td>{{item.dob | age}}</td>
+    </tr>
+</table>
+<hr>
+    <!-- <p *ngIf="isloggedin; else logout">This is ngif statement</p>
+    
+    <ng-template #logout>
+        <p>This is else statement</p>
+    </ng-template>
+     -->
+    <pre>
+        {{obj | json}}
+    </pre>
+    Select Country:
+    <select (change)="choice($event)">
+        <option>Select Country</option>
+   <!-- <select (change)="choice($event.target.value)"> -->
+    <option *ngFor="let item of countries" [value]="item.code">{{ item.country }}</option>
+</select>
+    
+    <div [ngSwitch]="selectedcountry">
+        <hr>
+        <div *ngSwitchCase="'ind'">
+            <h4>India calling code is +91</h4>
+        </div>
+        <div *ngSwitchCase="'uae'">
+            <h4>United Arab Emirates calling code is +88</h4>
+        </div>
+        <div *ngSwitchCase="'pak'">
+            <h4>Pakistan calling code is +68</h4>
+        </div>
+        <div *ngSwitchDefault>
+            <h4>Select your Coutry</h4>
+        </div>
+    </div>
+    <hr>
+    <h4>{{fname}}</h4>
+    <hr>
+
+    <button (click)="change()">Output Component</button>
+     
+     
