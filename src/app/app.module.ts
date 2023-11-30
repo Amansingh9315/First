@@ -14,6 +14,9 @@ import {RouterModule,Routes } from '@angular/router';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
 import { UserComponent } from './user/user.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CalenderComponent } from './calender/calender.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 // const routes:Routes =[
 //   {path:"",redirectTo:'users',pathMatch:"full"},
@@ -22,7 +25,7 @@ import { UserComponent } from './user/user.component';
 //   {path:'child',component:ChildComponent},
 //   {path:'binding',component:BindingComponent},
 //   {path:"**",redirectTo:"users"}
-//]
+// ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,7 @@ import { UserComponent } from './user/user.component';
     ChildComponent,
     AgePipe,
     UserComponent,
+    CalenderComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { UserComponent } from './user/user.component';
     HttpClientModule,
     // RouterModule.forRoot(routes),
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    ReactiveFormsModule,
+    FullCalendarModule
 
   ],
   providers:[UserService],

@@ -1,0 +1,44 @@
+::ng-deep .fc-prev-button.fc-button.fc-button-primary,
+::ng-deep .fc-next-button.fc-button.fc-button-primary {
+    margin: 0 5px !important;
+    line-height: 10px !important;
+    background: #f5f5f5 !important;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25) !important;
+    color: #333 !important;
+}
+
+::ng-deep .fc-today-button.fc-button.fc-button-primary,
+::ng-deep .fc-timeGridDay-button.fc-button.fc-button-primary,
+::ng-deep .fc-timeGridWeek-button.fc-button.fc-button-primary,
+::ng-deep .fc-dayGridMonth-button.fc-button.fc-button-primary,
+::ng-deep .fc-dayGridWeek-button.fc-button.fc-button-primary,
+::ng-deep .fc-dayGridDay-button.fc-button.fc-button-primary {
+    margin: 0 5px !important;
+    line-height: 0 !important;
+    background: #f5f5f5 !important;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25) !important;
+    color: #333 !important;
+    padding: 10px !important;
+    background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+    background-repeat: repeat-x;
+    border-radius: 3px !important;
+}
+
+::ng-deep .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
+    background: #fff !important;
+    margin: 0 !important;
+    height: 50px;
+}
+
+::ng-deep .fc-state-active {
+    background-color: #ccc;
+    background-image: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+::ng-deep .fc-day.fc-day-past.fc-day-other.fc-daygrid-day,
+::ng-deep.fc-day.fc-day-future.fc-day-other.fc-daygrid-day {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, .03)25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .03)50%, rgba(0, 0, 0, .03)75%, transparent 75%, transparent);
+    background-color: #FAFCFD;
+    background-size: 16px 16px;
+}
